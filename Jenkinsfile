@@ -7,7 +7,7 @@ pipeline {
         IMAGE_NAME = 'nginx-jenkins:latest'
         GIT_REPO_URL = 'https://github.com/lgouveia9/nginx-jenkins.git' // Substitua pela URL do seu repositório Git
         GIT_CREDENTIAL_ID = 'github' // Substitua pelo ID de suas credenciais Git configuradas no Jenkins
-        DOCKERFILE_PATH = '/opt/jenkins-nginx/Dockerfile'
+        DOCKERFILE_PATH = '/home/nginx-jenkins/Dockerfile'
     }
 
     stages {
