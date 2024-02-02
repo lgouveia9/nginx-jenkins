@@ -7,7 +7,7 @@ pipeline {
         IMAGE_NAME = 'nginx-jenkins:latest'
         GIT_REPO_URL = 'https://github.com/lgouveia9/nginx-jenkins.git' // Substitua pela URL do seu repositório Git
         GIT_CREDENTIAL_ID = 'github' // Substitua pelo ID de suas credenciais Git configuradas no Jenkins
-        DOCKERFILE_PATH = '/opt/nginx-jenkins/Dockerfile'
+        DOCKERFILE_PATH = '/home/nginx-jenkins/Dockerfile'
     }
 
     stages {
@@ -24,8 +24,6 @@ pipeline {
                     // Constrói a imagem Docker
                     def dockerCli = tool 'docker'
                     sh "${dockerCli} build -t ${DOCKER_REGISTRY}/${IMAGE_NAME} -f ${DOCKERFILE_PATH} ."
-                    // docker.build("lgouveia/nginx-jenkins:latest",
-                    //  '-f /opt/nginx-jenkins/Dockerfile .')
                 }
             }
         }
