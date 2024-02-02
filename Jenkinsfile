@@ -24,8 +24,6 @@ pipeline {
                     // Constrói a imagem Docker
                     def dockerCli = tool 'docker'
                     sh "${dockerCli} build -t ${DOCKER_REGISTRY}/${IMAGE_NAME} -f ${DOCKERFILE_PATH} ."
-                    // docker.build("lgouveia/nginx-jenkins:latest",
-                    //  '-f /opt/nginx-jenkins/Dockerfile .')
                 }
             }
         }
