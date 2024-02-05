@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_REGISTRY = 'registry.hub.docker.com/lgouveia' // Substitua pelo seu registro Docker
         DOCKER_STACK_NAME = 'nginx-jenkins'
-        IMAGE_NAME = 'nginx-jenkins:latest'
+        IMAGE_NAME = 'lgouveia/jenkins-nginx:latest'
         GIT_REPO_URL = 'https://github.com/lgouveia9/nginx-jenkins.git' // Substitua pela URL do seu repositório Git
         GIT_CREDENTIAL_ID = 'github' // Substitua pelo ID de suas credenciais Git configuradas no Jenkins
         DOCKERFILE_PATH = '/home/nginx-jenkins/Dockerfile'
