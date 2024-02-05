@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_REGISTRY = 'registry.hub.docker.com/lgouveia' // Substitua pelo seu registro Docker
+        DOCKER_REGISTRY = 'registry.hub.docker.com' // Substitua pelo seu registro Docker
         DOCKER_STACK_NAME = 'nginx-jenkins'
         IMAGE_NAME = 'lgouveia/jenkins-nginx:latest'
         GIT_REPO_URL = 'https://github.com/lgouveia9/nginx-jenkins.git' // Substitua pela URL do seu repositório Git
